@@ -1,0 +1,150 @@
+@import "partials/variables.scss";
+@import "partials/lux-gallery.scss";
+@import "partials/lux-div.scss";
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+.lux-gallery {
+    
+}
+
+
+.lux-gallery-title {
+    text-align: $title_align;
+}
+
+.lux-subcontainer {
+    padding: $subcontainer_pad;
+    text-align: center;
+    @include breakpoint($tablet){
+        padding: $subcontainer_padTablet;
+    }
+    @include breakpoint($phablet){
+        padding: $subcontainer_padPhablet;
+    }
+    @include breakpoint($mobile){
+        padding: $subcontainer_padMobile;
+    }
+    @include breakpoint($watch){
+        padding: $subcontainer_padWatch;
+    }     
+}
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+
+.lux-div {
+    display: inline-block;
+    width: $div_width;
+    height: $div_height;
+    margin: $div_margin;
+    //float: left;
+    
+    @include breakpoint($tablet){
+        margin: $div_marginTablet;
+    }    
+    @include breakpoint($phablet){
+        margin: $div_marginPhablet;
+    }    
+    @include breakpoint($mobile){
+        margin: $div_marginMobile;
+    }   
+    @include breakpoint($watch){
+        margin: $div_marginWatch;
+    }       
+}
+
+
+.lux-subdiv {
+    width: $subdiv_width;
+    height: $subdiv_height;
+    border: $subdiv_border;
+    @include imgShadow();
+}
+.lux-subdiv:hover {
+    @include imgShadowHover();
+}
+//added after images are loaded
+.lux-subdiv-afterload {
+    background: $subdiv_bg;
+}
+
+
+
+.lux-link {
+    width: $link_width;
+    height: $link_height;
+    display: block;
+    text-align: center;
+}
+
+
+
+/* Thumbnail image */
+.lux-thumb {
+    width: $thumb_width;
+    height: $thumb_height;
+}
+.lux-thumb:hover {   //hover
+    //border: 2px solid $subdiv_bg;
+    //border: 2px solid transparent;
+}
+
+
+/* Titles */
+.lux-title {
+    height: $title-height;
+    width: $title-width;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: $title-height;
+    font-size: $title-font-size;
+    padding-top: $title-pad-top;
+}
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// THESE CLASSES MUST GO LAST AT THE END OF THE STYLESHEET
+
+.wide-thumb {
+    width: 100% !important;
+    height: auto !important;
+    vertical-align: middle;
+}
+
+.tall-thumb {
+    height: 100% !important;
+    width: auto !important;
+}
+
+
+//for wide picture centering
+.lux-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+// END OF STYLESHEET
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//////////////////////////////////////////////////////////////////////////////////////
