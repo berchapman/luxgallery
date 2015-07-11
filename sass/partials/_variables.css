@@ -1,0 +1,55 @@
+/*
+Error: Invalid CSS after "    padding-left:": expected expression (e.g. 1px, bold), was ";"
+        on line 16 of /home/ubuntu/workspace/sass/partials/_variables.scss
+
+11: 
+12: 
+13: //GRID
+14: .uber {
+15:     max-width: 1300px;
+16:     padding-left:;
+17: }
+
+Backtrace:
+/home/ubuntu/workspace/sass/partials/_variables.scss:16
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/lexer.rb:221:in `expected!'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/parser.rb:573:in `assert_expr'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/parser.rb:62:in `parse'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:1027:in `sass_script'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:880:in `value!'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:753:in `block in try_declaration'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:1141:in `call'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:1141:in `rethrow'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:766:in `try_declaration'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:696:in `declaration_or_ruleset'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:661:in `block_child'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:642:in `block'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:635:in `ruleset'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:660:in `block_child'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:117:in `stylesheet'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/scss/parser.rb:42:in `parse'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/engine.rb:393:in `_to_tree'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin.rb:82:in `update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/bin/scss:13:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/scss:23:in `load'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/scss:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    padding-left:\": expected expression (e.g. 1px, bold), was \";\"\A         on line 16 of /home/ubuntu/workspace/sass/partials/_variables.scss\A \A 11: \A 12: \A 13: //GRID\A 14: .uber {\A 15:     max-width: 1300px;\A 16:     padding-left:;\A 17: }"; }

@@ -1,0 +1,26 @@
+@import 'breakpoint';
+
+//UNIVERSALIS
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -moz-box-sizing: border-box;    
+  box-sizing: inherit;
+}
+
+
+
+//COLORS
+$yellow: #FFC91D;
+$mellow: #FFE695;
+
+
+//GRID
+.uber {
+    max-width: 1300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
+}
