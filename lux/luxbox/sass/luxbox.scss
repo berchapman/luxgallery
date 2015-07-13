@@ -80,26 +80,36 @@
 #luxbox-left {
     width: $arrow-size;
     height: $arrow-size;
-    border: 1px solid gold;
     position: fixed;
     top: 50%;
     left: 0%;
     box-sizing: border-box;
     margin: $arrow-margin;
     margin-top: -1 * ($arrow-size / 2); //centering vertically
+    
+    background-image: url("../../assets/lux_left.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    
     @include arrowSize();
 }
 
 #luxbox-right {
     width: $arrow-size;
     height: $arrow-size;
-    border: 1px solid gold;
     position: fixed;
     top: 50%;
     right: 0%;
     box-sizing: border-box;
     margin: $arrow-margin;    
     margin-top: -1 * ($arrow-size / 2); //centering vertically   
+    
+    background-image: url("../../assets/lux_right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;    
+    
     @include arrowSize();      
 }
 
@@ -109,9 +119,14 @@
     position: fixed;
     top: 0;
     right: 0;
-    border: 1px solid silver;
     box-sizing: border-box;
     margin: $exit-margin;
+    
+    background-image: url("../../assets/lux_exit2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    
     @include breakpoint(271px 350px){
         width: $exit-size - 4px;
         height: $exit-size - 4px;        

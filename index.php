@@ -8,7 +8,7 @@
   <?php include $_SERVER['DOCUMENT_ROOT'].'/lux/luxgallery.php'; ?>
   
   
-  <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="stylesheet" href="css/style.css">-->
 </head>
 <body>
 
