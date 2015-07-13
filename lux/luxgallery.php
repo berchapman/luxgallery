@@ -86,7 +86,9 @@ function luxGallery($luxGalleryTitle = ''){
                   if( $key == (count($arrayOfFiles) - 1)){
                       echo $value;
                   } else {
-                      echo $value, ' ';                  
+                      //the bel value is used as a seperator between files (for when we need to split
+                      //this array into its individual values)
+                      echo $value, "␇";
                   };
                 };
             echo '</div>';

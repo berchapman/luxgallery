@@ -7,7 +7,10 @@ jsonImages = JSON.parse(jsonImages);
 
 function getFilesArray(){
     var filesArray = document.getElementById('lux_data_files').innerHTML;
-    return filesArray.split(" ");
+     
+        
+    return filesArray.split("␇");        
+    
 };
 ///////////////////////////////
 
