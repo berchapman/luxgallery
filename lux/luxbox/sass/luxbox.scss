@@ -1,0 +1,158 @@
+@import "partials/variables.scss";
+
+
+
+#luxbox {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100001;
+    background: black;
+    background: $luxboxBG;
+    box-sizing: border-box;    
+    
+}
+
+#luxbox-container {
+    width: $container-width;
+    height: $container-height;
+    box-sizing: border-box;     
+}
+
+
+
+#luxbox-subcontainer {
+    text-align: center;
+    width: $subcontainer-width;
+    height: $subcontainer-height;
+    padding: $subcontainer-pad;    
+    box-sizing: border-box;     
+}
+//psuedo element used for centering child content
+#luxbox-subcontainer:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    box-sizing: border-box;     
+}
+
+
+
+#luxbox-picture {
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    //max-height: 100%;
+    //max-width: 100%;
+}
+
+
+
+/////////////////////////////////////////////////////////////////
+
+@mixin arrowSize(){
+    @include breakpoint($tablet){
+        width: $arrow-size - 30px;
+        height: $arrow-size - 30px;
+        margin-top: -1 * (($arrow-size - 30px) / 2);
+    }
+    @include breakpoint($phablet){
+        width: $arrow-size - 40px;
+        height: $arrow-size - 40px;
+        margin-top: -1 * (($arrow-size - 40px) / 2);
+    }
+    @include breakpoint($mobile){
+        width: $arrow-size - 50px;
+        height: $arrow-size - 50px;
+        margin-top: -1 * (($arrow-size - 50px) / 2);
+    }     
+    @include breakpoint($watch){
+        width: $arrow-size - 65px;
+        height: $arrow-size - 65px;
+        margin-top: -1 * (($arrow-size - 65px) / 2);
+    }        
+}
+
+#luxbox-left {
+    width: $arrow-size;
+    height: $arrow-size;
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    box-sizing: border-box;
+    margin: $arrow-margin;
+    margin-top: -1 * ($arrow-size / 2); //centering vertically
+    
+    background-image: url("../../assets/lux_left.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    
+    @include arrowSize();
+}
+
+#luxbox-right {
+    width: $arrow-size;
+    height: $arrow-size;
+    position: fixed;
+    top: 50%;
+    right: 0%;
+    box-sizing: border-box;
+    margin: $arrow-margin;    
+    margin-top: -1 * ($arrow-size / 2); //centering vertically   
+    
+    background-image: url("../../assets/lux_right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;    
+    
+    @include arrowSize();      
+}
+
+#luxbox-exit {
+    width: $exit-size;
+    height: $exit-size;
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    margin: $exit-margin;
+    
+    background-image: url("../../assets/lux_exit2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    
+    @include breakpoint(271px 350px){
+        width: $exit-size - 4px;
+        height: $exit-size - 4px;        
+    }
+    @include breakpoint(0px 270px){
+        width: $exit-size - 8px;
+        height: $exit-size - 8px;        
+    }    
+}
+
+
+////////
+
+
+#luxbox-wordsDiv {
+    width: 100%;
+    height: $wordsDiv-height;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+#luxbox-title {
+    color: $title-color;
+    line-height: $wordsDiv-height;
+}
+
+

@@ -1,0 +1,56 @@
+@import 'breakpoint';
+
+//BREAKPOINTS
+$watch: 0px 290px;
+$mobile: 291px 400px;
+$phablet: 401px 600px;
+$tablet: 601px 880px;
+
+
+/* COLORS */
+$luxboxBG: black;
+$luxboxBG: rgba(0,0,0,0.85);
+$title-color: white;
+
+
+//////////////////
+
+
+/* wordsDiv */
+$wordsDiv-height: 40px;
+
+/* title */
+
+
+//////////////////
+
+
+/* WIDTH and HEIGHT and SIZING */
+
+/* container */
+$container-width: 100%;
+$container-height: 100%;
+
+/* subcontainer */
+$subcontainer-width: 100%;
+$subcontainer-height: 100%;
+$subcontainer-pad: 15px 15px $wordsDiv-height 15px;         //PADDING
+
+/* picture */
+
+
+/* left and right arrows */
+$arrow-size: 100px;
+$arrow-margin: 4px;
+
+
+/* exit */
+$exit-size: 36px;
+$exit-margin: 4px 4px 0px 0px;
+
+
+
+
+
+
+

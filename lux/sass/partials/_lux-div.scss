@@ -1,0 +1,70 @@
+//CONTROLS LUX-DIV AND DOWN
+
+
+//MAIN CONTROLS
+    /* Image size */
+    $img: 250px;
+    /* Title area height */
+    $title: 40px;
+    
+    /* Image background */
+    $imgBG: #ffffff;
+    /* Image border */
+    $imgBorder: none;
+    
+    @mixin imgShadow(){
+        -webkit-box-shadow: 0px 0px 3px 0px #C4C4C4;
+        -moz-box-shadow: 0px 0px 3px 0px #C4C4C4;
+        box-shadow: 0px 0px 3px 0px #C4C4C4;        
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);        
+    }
+    @mixin imgShadowHover(){
+        -webkit-box-shadow: 0px 0px 5px 0px #C4C4C4;
+        -moz-box-shadow: 0px 0px 5px 0px #C4C4C4;
+        box-shadow: 0px 0px 5px 0px #C4C4C4;         
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);        
+    }    
+
+
+
+//TOPMOST DIV DIMENSIONS
+/* lux-div */
+    $div_width: $img;
+    $div_height: $img + $title;
+
+    $div_margin: 0px $genspace $genspace 0px;
+        $div_marginTablet: 0px $genspaceTablet $genspaceTablet 0px;
+        $div_marginPhablet: 0px $genspacePhablet $genspacePhablet 0px;     
+        $div_marginMobile: 0px $genspaceMobile $genspaceMobile 0px;    
+        $div_marginWatch: 0px $genspaceWatch $genspaceWatch 0px;            
+
+
+//IMAGE DIMENSIONS
+/* lux-subdiv */
+    $subdiv_width: $img;
+    $subdiv_height: $img;
+    $subdiv_bg: $imgBG;
+    $subdiv_border: $imgBorder;
+
+
+/* lux-link */
+    $link_height: 100%;
+    $link_width: 100%;
+
+
+/* lux-thumb */
+    $thumb_width: $subdiv_width;
+    $thumb_height: $subdiv_height;
+    
+
+//TITLES
+/* lux-title */
+    $title-height: $title;
+    $title-width: 100%;
+    $title-font-size: 16px;
+    $title-pad-top: 4px;    //how much extra space between pic and title
+    
