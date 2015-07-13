@@ -13,7 +13,7 @@ define('LUXROOT', '/lux');
 
 
 /* Set loading animation for gallery thumbs */
-define('LUXLOADING', 'loading.png');
+define('LUXLOADING', 'loading.gif');
 
 
 
