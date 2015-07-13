@@ -4,11 +4,13 @@
 
 
 /* Set folder(s) for gallery images */
+/* LuxGallery will pull images for galleries from these folders */
 define('LUXGALLERYFOLDER', 'images');
 
 
 
 /* Set absolute path to lux */
+/* Default to web root */
 define('LUXROOT', '/lux');
 
 
@@ -23,7 +25,7 @@ define('LIGHTBOXPATH', LUXROOT.'/luxbox/luxbox.js');
 
 
 /* Use luxbox for the lightbox effect? */
-// Set to false if using a third-party lightbox effect
+// Set to false if using a third-party lightbox effect. By default the integrated luxbox will be used.
 if( true ){
 
     /* Set lightbox */
@@ -41,7 +43,8 @@ if( true ){
     echo '<link rel="stylesheet" href="'.LUXROOT.'/style/luxgallery.css">';
 
     /* Include normalize.css */
-    echo '<link rel="stylesheet" href="'.LUXROOT.'/style/normalize.css">';
+    /* Comment this out if normalize.css is already used in your website */
+    echo '<link rel="stylesheet" href="'.LUXROOT.'/style/normalize.min.css">';
 
 
 
