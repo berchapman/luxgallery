@@ -51,7 +51,8 @@ function callOnResize() {
 
 
 function galleryImgClick(event){
-    var id = event.srcElement.attributes[0].nodeValue;
+//var id = event.srcElement.attributes[0].nodeValue;   OLD VALUE... didnt work on firefox
+    var id = event.target.parentNode.childNodes[0].id;
     
     if( id == 'lux-link' ){
         if( CLICKEXACT == false ){
@@ -76,10 +77,12 @@ function galleryImgClick(event){
 function setImage(id){
   
     CURRENT = id;
-  
+      
     var imgTag = document.getElementById('luxbox-picture');
     var source = document.getElementById(id).src;
     imgTag.src = source;
+    
+
     
     setWords();
     resizePicture(id);
@@ -292,6 +295,8 @@ function triggerRepaint(){
     var n = document.createTextNode(' ');
     var disp = parent.style.display;  
 
+
+
     parent.appendChild(n);
     parent.style.display = 'none';
 
@@ -300,6 +305,10 @@ function triggerRepaint(){
         n.parentNode.removeChild(n);
     },15);
     //document.getElementById('luxbox-picture').style.opacity = 1;
+    
+    //this fixes firefox bug where subcontainer remains display:none
+    var subcontainer = document.getElementById('luxbox-subcontainer');
+    subcontainer.style.display = 'block';    
 }
 
 
@@ -361,13 +370,13 @@ function createLuxbox(id){
     wordsDiv.appendChild(title);
     
     
-    luxbox.addEventListener('click', function(){
+    luxbox.addEventListener('click', function(event){
         luxboxInteraction(event);
     }, false);
     
     
     if( typeof document.addEventListener != 'undefined' ){
-        document.addEventListener('keydown', function(){
+        document.addEventListener('keydown', function(event){
             luxboxInteraction(event); 
         });        
     } else if( typeof document.attachEvent != 'undefined' ){
