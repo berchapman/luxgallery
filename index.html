@@ -14,31 +14,53 @@
     <div class="titlebox">
         <h1>LuxGallery</h1>
         <h2>Combined gallery and lightbox</h2>
-        <h3>Incredibly simple, all-in-one solution for web galleries</h3>        
+        <h3>Incredibly simple, all-in-one solution for web galleries</h3>
+        <div class="dlbox">
+            <h3><a href="https://luxgalleryexample.herokuapp.com/" target="_blank">Demo</a></h3><h3><a href="/lux.zip" target="_blank">Download</a></h3><h3><a href="https://github.com/berchapman/luxgallery/tree/master" target="_blank">Github</a></h3>
+        </div>
     </div>
     <div class="preview">
-        <img src="assets/full.jpg" alt="LuxGallery example">
-        <img src="assets/full_luxbox.jpg" alt="LuxGallery example">        
+        <h2>Responsive design at any size</h2>
+        <div class="full-container">
+            <img src="assets/full.jpg" alt="LuxGallery example"><img src="assets/full_luxbox.jpg" alt="LuxGallery example">             
+        </div>
+        <div class="mobile-container">
+            <img src="assets/mobile.jpg" alt="LuxGallery mobile example"><img class="second" src="assets/mobile_luxbox.jpg" alt="LuxGallery mobile example">             
+        </div>        
     </div>
     <div class="instructions">
         <h1>Instructions</h1>
         <div class="center-container">
             <ul>
-                <li>Download LuxGallery</li>
-                <li>Upload the LuxGallery folder to the root of your website</li>
+                <li><a href="/lux.zip">Download LuxGallery (lux.zip)</a></li>
+                <li>Unzip the downloaded folder (lux.zip -> lux)</li>                
+                <li>Upload the LuxGallery folder (lux) to the root of your website (where your homepage resides)</li>
+                <li>To include a gallery on a page, copy and paste the following line of code into the head section of the page: <br><pre>&lt?php include $_SERVER['DOCUMENT_ROOT'].'/lux/luxgallery.php'; ?&gt</pre></li>
+                <li>If the page isn't already a PHP file, rename it (index.html -> index.php)</li>
+                <li>Make a folder called "images" on the same 'level' (within the file hierarchy) where your gallery page is. In that folder, place the images you want the gallery to display.</li>
+                <li>Finally, you can instantiate a gallery anywhere within the body of your page by including the following line of code: <br><pre>&lt?php luxGallery("<span style="color:white;">Your gallery name goes here</span>") ?&gt</pre></li>
             </ul>                   
         </div>
     </div>
     <div class="about">
         <h1>About</h1>
-        <p>LuxGallery requiers a web server with PHP 5.4+</p>
-        <p>I made this app because I wanted a simple, elegant photo gallery that was plug-and-play. Most importantly,
-        I created LuxGallery to be accesible and and usable by everyone, not just developers.</p>
+        <h2>Requirements:</h2>
+        <div class="center-container">
+            <ul>
+                <li>LuxGallery requiers a web server with PHP 5.4+</li>
+                <li>Only one gallery per page</li>
+                <li>Image files cannot begin with a period</li>
+            </ul>
+        </div>
+        <h2 style="padding-top: 10px; margin-bottom: 10px;">Supported image file formats:</h2>
+        <h3>JPG / JPEG, PNG, GIF, TIFF, BMP</h3>
+        <p>I made LuxGallery because I wanted a simple, elegant photo gallery that was plug-and-play. Most importantly,
+        I created LuxGallery to be accesible and and usable by everyone, regardless of their familiarity with web development.</p>
     </div>
     <div class="credits">
         <h1>Credits</h1>
-        <h3>Created by Richard Ber Chapman</h3>
-        <h3>MyWebsite.com</h3>
+        <p>Created by Richard Ber Chapman</p>
+        <p><a href="http://richardberchapman.com" target="_blank">richardberchapman.com</a></p>
         <p>Contact: myemail@myemail.com</p>
     </div>
     

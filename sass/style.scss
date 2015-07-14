@@ -10,19 +10,188 @@ body {
 .center-container {
     margin: 0 auto;
     width: 400px;
+    @include breakpoint(0px 550px){
+        width: 100%;
+    }
+}
+.center-container a {
+    color: black;
+}
+.center-container a:hover {
+    color: #0000EE;    
+}
+
+.center-container pre {
+    text-align: center;
+    width: 600px;
+    position: relative;
+    margin-left: -125px;
+    background: black;
+    color: #29E02D;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @include breakpoint(485px 640px){
+        margin-left: -20px;
+        height: 54px;
+        width: 420px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    @include breakpoint(420px 485px){
+        height: 60px;
+        width: 320px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        position: static;
+        margin: auto;
+        border-top: 6px solid $mellow;
+    }
+    @include breakpoint(356px 419px){
+        height: 60px;
+        width: 280px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        position: static;
+        margin: auto;
+        border-top: 6px solid $mellow;
+    }    
+    @include breakpoint(315px 355px){
+        height: 60px;
+        width: 240px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        position: static;
+        margin: auto;
+        border-top: 6px solid $mellow;        
+    }     
+    @include breakpoint(0px 314px){
+        height: 60px;
+        width: 200px;
+        padding-left: 4px;
+        padding-right: 4px;
+        text-align: center;
+        position: static;
+        margin: auto;
+        margin-left: -20px;
+        border-top: 6px solid $mellow;        
+    }       
+    
+
 }
 
 
 //TITLEBOX
 .titlebox {
     text-align: center;
+    padding-top: 28px;
 }
+.titlebox h1 {
+    font-size: 2.5em;
+    padding-bottom: 6px;
+}
+
+.dlbox {
+    //border: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.dlbox h3 {
+    display: inline-block;
+    //padding: 16px 0px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0px 6px;
+    width: 150px;
+    color: white;
+    background: black;
+    
+    -webkit-box-shadow: inset 0px 31px 48px -33px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 31px 48px -33px rgba(255,255,255,1);
+    box-shadow: inset 0px 31px 48px -33px rgba(255,255,255,1);
+    @include breakpoint(0px 570px){  //380
+        margin-bottom: 12px;
+    }
+}
+.dlbox h3:hover{
+    outline: 1px solid black;
+}
+
+.dlbox h3 a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px; 
+    width: 100%;
+    line-height: 60px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+.dlbox h3 a:visited {
+    color: white;
+}
+.dlbox h3 a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+//click
+.dlbox h3:active {
+    margin: 0px 7px;
+    width: 148px;
+    height: 58px;
+    line-height: 58px;
+    color: white;
+    text-decoration: underline;
+}
+.dlbox h3 a:active {
+    line-height: 58px;
+    color: white;
+    text-decoration: underline;
+}
+
+//PREVIEW
+.preview {
+    text-align: center;
+    max-width: 950px;
+    margin: auto;
+    //background: white;
+}
+.full-container img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.mobile-container {
+    background: white;
+    margin-top: 5px;
+}
+.mobile-container img {
+    //width: 50%;
+    height: 450px;
+    width: auto;
+    margin: auto;
+    padding: 5px;
+    display: inline-block;
+    @include breakpoint(701px 800px){
+        height: 380px;
+    }    
+    @include breakpoint(0px 700px){
+        height: 330px;
+    }
+}
+
 
 
 
 //INSTRUCTIONS
 .instructions {
     text-align: center;
+    @include pad();
 }
 
 .instructions ul {
@@ -33,16 +202,51 @@ body {
     padding: 0;
     margin-left: 25px;
 }
+.instructions ul li {
+    margin-bottom: 8px;
+}
 
 
 
 //ABOUT
+.about {
+    @include pad();    
+}
 .about h1 {
     text-align: center;
+}
+.about h2 {
+    text-align: center;
+}
+.about h3 {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about ul {
+    list-style-type: circle;
+    //list-style-position: inside;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-left: 25px;
+}
+.about ul li {
+    margin-bottom: 8px;
 }
 
 
 //CREDITS
+.credits {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 75px;
+}
 .credits h1 {
     text-align: center;
+}
+
+.credits a {
+    color: black;
 }

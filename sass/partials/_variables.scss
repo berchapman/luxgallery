@@ -1,5 +1,9 @@
 @import 'breakpoint';
 
+//FONTS
+@import url(https://fonts.googleapis.com/css?family=Raleway:300); //raleway 300
+@import url(https://fonts.googleapis.com/css?family=Merriweather); //merriwether 400
+
 //UNIVERSALIS
 html {
   -moz-box-sizing: border-box;
@@ -14,7 +18,30 @@ html {
 
 //COLORS
 $yellow: #FFC91D;
-$mellow: #FFE695;
+$mellow: #FFF4C4; //#FFE695;
+
+
+//TYPOGRAPHY
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;  
+}
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;    
+}
+p, li, a {
+    font-family: 'Merriweather', serif;
+    line-height: 1.5em;
+}
+
 
 
 //GRID
@@ -23,5 +50,27 @@ $mellow: #FFE695;
     padding-left: 100px;
     padding-right: 100px;
     margin: auto;
-    border: 1px solid black;
+    overflow-x: hidden;
+    @include breakpoint(801px 950px){
+        padding-left: 75px;
+        padding-right: 75px;
+    }    
+    @include breakpoint(601px 800px){
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @include breakpoint(401px 600px){
+        padding-left: 30px;
+        padding-right: 30px;
+    }  
+    @include breakpoint(0px 400px){
+        padding-left: 18px;
+        padding-right: 18px;
+    }      
+}
+
+
+@mixin pad(){
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
