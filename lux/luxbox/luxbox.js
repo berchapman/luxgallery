@@ -52,7 +52,12 @@ function callOnResize() {
 
 function galleryImgClick(event){
 //var id = event.srcElement.attributes[0].nodeValue;   OLD VALUE... didnt work on firefox
-    var id = event.target.parentNode.childNodes[0].id;
+    
+    if(event.target.childNodes[0] !== undefined){
+        var id = event.target.childNodes[0].id;        
+    } else {
+        var id = event.target.parentNode.childNodes[0].id;
+    }
     
     if( id == 'lux-link' ){
         if( CLICKEXACT == false ){
